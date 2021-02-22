@@ -5,6 +5,8 @@
 It shows a calendar using data from a json file (hardocded on a file) and remember what do you have to do on this
 semester. Furthermore, this is a React Framework test to improve my skills.
 
+_This application has a language mix inside_
+
 ## How works?
 
 In the project directory, run: `npm start`
