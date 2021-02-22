@@ -1,52 +1,52 @@
 import * as React from 'react'
 import moment from "moment";
-import * as grafs from './grafs.json'
+import {Subject} from "./interfaces/Schedule";
+
+
 
 interface Props {
     diaActual: any;
+    subjects:  Array<Subject>
 }
 
 const Dia = (props: Props) => {
-    const {diaActual} = props
+    const {diaActual, subjects} = props
     const dia = moment(diaActual.format())
 
-    let parsedItems = [];
-    // for (let subject of grafs.subjects) {
-    //     for (let task of subject.items) {
-    //         if (dia >= moment(task.from) && dia <= moment(task.to)) {
-    //             parsedItems.push(task)
-    //         }
-    //     }
-    // }
-    parsedItems = grafs.subjects
-    let mainStyle
+    let mainStyle = {
+        minHeight: '75px',
+        height: '100%'
+    }
     if (moment().isAfter(dia)) {
-        mainStyle = {backgroundColor: 'rgba(255,0,0,0.2)'}
+        mainStyle = Object.assign({backgroundColor: 'rgba(255,0,0,0.2)'}, mainStyle);
     }
     return (
-        <div style={mainStyle}>
-            <div className={'w-100'}>{dia.format('D')}</div>
-            {parsedItems?.map(subject => (
+        <div style={mainStyle} className={'border-end border-dotted'}>
+            <div className={'w-100 text-start text-bold d-flex'}>{dia.format('D')}</div>
+            {subjects?.map(subject => (
                 subject.items?.filter(item => dia >= moment(item.from) && dia <= moment(item.to))
-                    .sort(item => item.required ? 1 : 0)
                     .map(item => {
 
                         let hasStartedToday = dia.isSame(item.from)
                         let lastDay = dia.isSame(item.to)
                         let style;
+
                         if (item.required) {
                             style = {
                                 height: '25px',
                                 overflow: 'none',
-                                marginBottom: '5px'
+                                marginBottom: '2px',
+                                order: 1
                             }
                         } else {
                             style = {
-                                height: '12px',
+                                minHeight: '12px',
                                 fontSize: '9px',
                                 lineHeight: '10px',
                                 overflow: 'none',
-                                opacity: 0.8
+                                opacity: 0.8,
+                                marginBottom: '1px',
+                                order: 0
                             }
                         }
 
@@ -63,12 +63,14 @@ const Dia = (props: Props) => {
                         } else if (lastDay) {
                             return <div className={'w-100'} style={style}>
                                 <div style={style}
-                                     className={`${subject.class} w-75 float-start border-solid border-dark border-bottom border-top border-end rounded-end clearfix`}>{item.task}⚠
+                                     className={`${subject.class} w-75 float-start text-end border-solid border-dark border-bottom border-top border-end rounded-end clearfix`}>{item.task}⚠
                                 </div>
                             </div>;
-                            // } else if(!item.required) {
-                            //     return <div className={'w-100'} style={style}><div style={style}
-                            //                 className={`${subject.class} w-100 border-solid border-bottom border-top clearfix`}/></div>;
+                        } else if (!item.required) {
+                            // return <div className={'w-100'} style={style}>
+                            //     <div style={style}
+                            //          className={`${subject.class} w-100 border-solid border-dark border-bottom border-top clearfix `}/>
+                            // </div>;
                         }
                     })
             ))}

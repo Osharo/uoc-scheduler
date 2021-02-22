@@ -1,0 +1,289 @@
+{
+  "subjects": [
+    {
+      "name": "Estructura de computadors",
+      "class": "bg-info",
+      "items": [
+        {
+          "from": "2021-2-24",
+          "to": "2021-3-16",
+          "task": "PAC1",
+          "required": true
+        },
+        {
+          "from": "2021-3-17",
+          "to": "2021-4-13",
+          "task": "PAC2",
+          "required": true
+        },
+        {
+          "from": "2021-4-14",
+          "to": "2021-5-4",
+          "task": "PAC3",
+          "required": true
+        },
+        {
+          "from": "2021-5-5",
+          "to": "2021-25-5",
+          "task": "PAC4",
+          "required": true
+        },
+        {
+          "from": "2021-02-17",
+          "to": "2021-02-21",
+          "task": "Setmana 0 - Introducció a Fonaments Físics de la Informàtica"
+        },
+        {
+          "from": "2021-02-22",
+          "to": "2021-02-28",
+          "task": "Setmana 1 - Òptica i Fotònica (I)"
+        },
+        {
+          "from": "2021-03-01",
+          "to": "2021-03-07",
+          "task": "Setmana 2 - Òptica i Fotònica (II)"
+        },
+        {
+          "from": "2021-03-08",
+          "to": "2021-03-14",
+          "task": "Setmana 3 - Òptica i Fotònica (III)"
+        },
+        {
+          "from": "2021-03-15",
+          "to": "2021-03-21",
+          "task": "Setmana 4 - Circuits elèctrics (I)"
+        },
+        {
+          "from": "2021-03-22",
+          "to": "2021-03-28",
+          "task": "Setmana 5 - Circuits elèctrics (II)"
+        },
+        {
+          "from": "2021-03-29",
+          "to": "2021-04-04",
+          "task": "Setmana Santa"
+        },
+        {
+          "from": "2021-04-05",
+          "to": "2021-04-11",
+          "task": "Setmana 6 - Circuits RLC"
+        },
+        {
+          "from": "2021-04-12",
+          "to": "2021-04-18",
+          "task": "Setmana 7 - Electrostàtica (I)"
+        },
+        {
+          "from": "2021-04-19",
+          "to": "2021-04-25",
+          "task": "Setmana 8 - Electrostàtica (II)"
+        },
+        {
+          "from": "2021-04-26",
+          "to": "2021-05-02",
+          "task": "Setmana 9 - Electrostàtica (III)"
+        },
+        {
+          "from": "2021-05-03",
+          "to": "2021-05-09",
+          "task": "Setmana 10 - Magnetostàtica i inducció magnètica (I)"
+        },
+        {
+          "from": "2021-05-10",
+          "to": "2021-05-16",
+          "task": "Setmana 11 - Magnetostàtica i Inducció magnètica (II)"
+        },
+        {
+          "from": "2021-05-17",
+          "to": "2021-05-23",
+          "task": "Setmana 12 - Magnetostàtica i Inducció magnètica (III)"
+        }
+      ]
+    },
+    {
+      "name": "Fonaments físics de la informàtica",
+      "class": "bg-success text-light",
+      "items": [
+        {
+          "from": "2021-3-5",
+          "to": "2021-3-15",
+          "task": "PAC1",
+          "required": true
+        },
+        {
+          "from": "2021-3-19",
+          "to": "2021-4-9",
+          "task": "PR1",
+          "required": true
+        },
+        {
+          "from": "2021-3-19",
+          "to": "2021-5-14",
+          "task": "PR1.2",
+          "required": true
+        },
+        {
+          "from": "2021-4-23",
+          "to": "2021-5-3",
+          "task": "PAC2",
+          "required": true
+        },
+        {
+          "from": "2021-4-30",
+          "to": "2021-5-14",
+          "task": "PR2",
+          "required": true
+        },
+        {
+          "from": "2021-2-19",
+          "to": "2021-2-25",
+          "task": "E-Teo-1"
+        },
+        {
+          "from": "2021-2-26",
+          "to": "2021-3-4",
+          "task": "E-Teo-2"
+        },
+        {
+          "from": "2021-3-12",
+          "to": "2021-3-18",
+          "task": "E-Prac-0"
+        },
+        {
+          "from": "2021-3-12",
+          "to": "2021-3-18",
+          "task": "E-Prac-0"
+        },
+        {
+          "from": "2021-4-9",
+          "to": "2021-4-15",
+          "task": "E-Teo-3"
+        },
+        {
+          "from": "2021-4-16",
+          "to": "2021-4-22",
+          "task": "E-Teo-4"
+        }
+      ]
+    },
+    {
+      "name": "Gestió de Projectes",
+      "class": "bg-primary text-light",
+      "items": [
+        {
+          "from": "2021-02-22",
+          "to": "2021-03-14",
+          "task": "PAC1",
+          "required": true
+        },
+        {
+          "from": "2021-3-17",
+          "to": "2021-4-7",
+          "task": "PAC1",
+          "required": true
+        },
+        {
+          "from": "2021-4-12",
+          "to": "2021-5-12",
+          "task": "PAC1",
+          "required": true
+        },
+        {
+          "from": "2021-5-17",
+          "to": "2021-6-9",
+          "task": "PAC1",
+          "required": true
+        },
+        {
+          "from": "2021-2-22",
+          "to": "2021-2-28",
+          "task": "LEC1"
+        },
+        {
+          "from": "2021-3-15",
+          "to": "2021-3-21",
+          "task": "LEC2"
+        },
+        {
+          "from": "2021-4-12",
+          "to": "2021-4-18",
+          "task": "LEC3"
+        },
+        {
+          "from": "2021-5-17",
+          "to": "2021-5-23",
+          "task": "LEC3"
+        },
+        {
+          "from": "2021-5-14",
+          "to": "2021-5-25",
+          "task": "DEBAT"
+        }
+      ]
+    },
+    {
+      "name": "Gestió de Projectes",
+      "class": "bg-warning",
+      "items": [
+        {
+          "from": "2021-02-3",
+          "to": "2021-03-25",
+          "task": "PAC1",
+          "required": true
+        },
+        {
+          "from": "2021-03-26",
+          "to": "2021-04-22",
+          "task": "PAC2",
+          "required": true
+        },
+        {
+          "from": "2021-04-28",
+          "to": "2021-5-20",
+          "task": "PAC3",
+          "required": true
+        },
+        {
+          "from": "2021-02-18",
+          "to": "2021-02-28",
+          "task": "M1"
+        },
+        {
+          "from": "2021-3-1",
+          "to": "2021-3-14",
+          "task": "M2"
+        },
+        {
+          "from": "2021-3-15",
+          "to": "2021-3-28",
+          "task": "M3"
+        },
+        {
+          "from": "2021-3-29",
+          "to": "2021-4-11",
+          "task": "M4"
+        },
+        {
+          "from": "2021-4-12",
+          "to": "2021-4-21",
+          "task": "M5"
+        },
+        {
+          "from": "2021-4-22",
+          "to": "2021-5-9",
+          "task": "M6"
+        },
+        {
+          "from": "2021-5-10",
+          "to": "2021-5-23",
+          "task": "M6"
+        },
+        {
+          "from": "2021-5-24",
+          "to": "2021-6-16",
+          "task": "M6"
+        }
+      ]
+    }
+  ]
+}
