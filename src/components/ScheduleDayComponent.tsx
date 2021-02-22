@@ -1,15 +1,14 @@
 import * as React from 'react'
 import moment from "moment";
-import {Subject} from "./interfaces/Schedule";
-
+import {Subject} from "../interfaces/Schedule";
 
 
 interface Props {
     diaActual: any;
-    subjects:  Array<Subject>
+    subjects: Array<Subject>
 }
 
-const Dia = (props: Props) => {
+const ScheduleDayComponent = (props: Props) => {
     const {diaActual, subjects} = props
     const dia = moment(diaActual.format())
 
@@ -17,8 +16,10 @@ const Dia = (props: Props) => {
         minHeight: '75px',
         height: '100%'
     }
-    if (moment().isAfter(dia)) {
+    if (moment().subtract(1, "day").isAfter(dia)) {
         mainStyle = Object.assign({backgroundColor: 'rgba(255,0,0,0.2)'}, mainStyle);
+    } else if (moment().startOf('day').isSame(dia.startOf('day'))) {
+        mainStyle = Object.assign({backgroundColor: 'rgba(100,100,100,0.2)'}, mainStyle);
     }
     return (
         <div style={mainStyle} className={'border-end border-dotted'}>
@@ -77,4 +78,4 @@ const Dia = (props: Props) => {
         </div>
     )
 }
-export default Dia
+export default ScheduleDayComponent
