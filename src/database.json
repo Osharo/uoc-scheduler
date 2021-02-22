@@ -1,7 +1,7 @@
 {
   "subjects": [
     {
-      "name": "Estructura de computadors",
+      "name": "Fonaments físics de la informàtica",
       "class": "bg-info",
       "items": [
         {
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "name": "Fonaments físics de la informàtica",
+      "name": "Estructura de computadors",
       "class": "bg-success text-light",
       "items": [
         {
@@ -222,7 +222,7 @@
       ]
     },
     {
-      "name": "Gestió de Projectes",
+      "name": "Grafs i complexitat",
       "class": "bg-warning",
       "items": [
         {
