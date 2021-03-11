@@ -13,9 +13,12 @@ moment.locale('cat')
 function App() {
     const [currentTime, setCurrentTime] = useState(moment())
 
-    setInterval(()=>{
-        setCurrentTime(moment())
-    },60000)
+    setInterval(() => {
+        const newTime = moment()
+        if (currentTime.format('mm') !== newTime.format('mm')) {
+            setCurrentTime(newTime)
+        }
+    })
 
     return (
         <div className="container-fluid">
