@@ -1,6 +1,7 @@
 import * as React from 'react'
 import moment from "moment";
 import {Subject} from "../interfaces/Schedule";
+import {useEffect, useRef} from "react";
 
 
 interface Props {
@@ -11,6 +12,13 @@ interface Props {
 const ScheduleDayComponent = (props: Props) => {
     const {diaActual, subjects} = props
     const dia = moment(diaActual.format())
+    let isToday = false;
+    const todayRef = useRef<null | HTMLDivElement>(null);
+
+    useEffect(() => {
+        let ref = todayRef.current;
+        if (isToday && ref) ref.scrollIntoView({block: 'center'})
+    }, [])
 
     let mainStyle = {
         minHeight: '75px',
@@ -20,9 +28,10 @@ const ScheduleDayComponent = (props: Props) => {
         mainStyle = Object.assign({backgroundColor: 'rgba(231,255,148,0.5)'}, mainStyle);
     } else if (moment().startOf('day').isSame(dia.startOf('day'))) {
         mainStyle = Object.assign({backgroundColor: 'rgb(184,255,188)'}, mainStyle);
+        isToday = true;
     }
     return (
-        <div style={mainStyle} className={'border-end border-dotted'}>
+        <div style={mainStyle} className={'border-end border-dotted'} ref={todayRef}>
             <div className={'w-100 text-start text-bold d-flex'}>{dia.format('D')}</div>
             {subjects?.map(subject => (
                 subject.items?.filter(item => dia >= moment(item.from) && dia <= moment(item.to))

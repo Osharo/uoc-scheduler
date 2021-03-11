@@ -24,7 +24,7 @@ function App() {
         <div className="container-fluid">
             <div className={"row"}>
                 <div className={"col-md-3 p-0 m-0"}>
-                    <div className={'sticky-xl-top sticky-lg-top pb-1'} style={{top: 0}}>
+                    <div className={'sticky-xl-top sticky-lg-top sticky-md-top pb-1'} style={{top: 0}}>
                         <div className={'p-1'} style={{backgroundColor: '#73EDFF', color: '#000078'}}>
                             <h1 className={'text-center'}>{currentTime.format('dddd, HH:mm')}</h1>
                         </div>
