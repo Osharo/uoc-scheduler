@@ -179,19 +179,19 @@
         {
           "from": "2021-3-17",
           "to": "2021-4-7",
-          "task": "PAC1",
+          "task": "PRA1",
           "required": true
         },
         {
           "from": "2021-4-12",
           "to": "2021-5-12",
-          "task": "PAC1",
+          "task": "PRA2",
           "required": true
         },
         {
           "from": "2021-5-17",
           "to": "2021-6-9",
-          "task": "PAC1",
+          "task": "PAC2",
           "required": true
         },
         {
