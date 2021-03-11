@@ -17,9 +17,9 @@ const ScheduleDayComponent = (props: Props) => {
         height: '100%'
     }
     if (moment().subtract(1, "day").isAfter(dia)) {
-        mainStyle = Object.assign({backgroundColor: 'rgba(255,0,0,0.2)'}, mainStyle);
+        mainStyle = Object.assign({backgroundColor: 'rgba(231,255,148,0.5)'}, mainStyle);
     } else if (moment().startOf('day').isSame(dia.startOf('day'))) {
-        mainStyle = Object.assign({backgroundColor: 'rgba(100,100,100,0.2)'}, mainStyle);
+        mainStyle = Object.assign({backgroundColor: 'rgb(184,255,188)'}, mainStyle);
     }
     return (
         <div style={mainStyle} className={'border-end border-dotted'}>
@@ -59,12 +59,12 @@ const ScheduleDayComponent = (props: Props) => {
                         } else if (hasStartedToday) {
                             return <div className={'w-100'} style={style}>
                                 <div style={style}
-                                     className={`${subject.class} w-75 float-end border-solid border-dark border-bottom border-top border-start rounded-start clearfix`}>🔛{item.task}</div>
+                                     className={`${subject.class} w-75 float-end border-solid border-dark border-bottom border-top border-start rounded-start clearfix`}>{item.task}</div>
                             </div>;
                         } else if (lastDay) {
                             return <div className={'w-100'} style={style}>
                                 <div style={style}
-                                     className={`${subject.class} w-75 float-start text-end border-solid border-dark border-bottom border-top border-end rounded-end clearfix`}>{item.task}⚠
+                                     className={`${subject.class} w-75 float-start text-end border-solid border-dark border-bottom border-top border-end rounded-end clearfix`}>{item.task}
                                 </div>
                             </div>;
                         } else if (!item.required) {

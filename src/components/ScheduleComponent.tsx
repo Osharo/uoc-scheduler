@@ -16,7 +16,10 @@ const ScheduleComponent = (props: Props) => {
             <div className={"row"}>
                 {[...Array(7)].map((_, dia) => (
                     <div
-                        className={'col border-bottom border-dark fs-4 p-0 m-0'}>{moment(semesterStartDate).day(dia + 1).format('dddd')}</div>
+                        className={'col border-bottom border-dark fs-4 p-0 m-0'}>
+                        <span className={'d-none d-md-block'}>{moment(semesterStartDate).day(dia + 1).format('dddd')}</span>
+                        <span className={'d-block d-md-none'}>{moment(semesterStartDate).day(dia + 1).format('ddd')}</span>
+                    </div>
                 ))}
                 <div className={'col fs-3 d-none d-lg-block'}/>
             </div>

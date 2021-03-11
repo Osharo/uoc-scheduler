@@ -5,22 +5,22 @@ import {Subject} from "../interfaces/Schedule";
 
 interface Props {
     subjects: Array<Subject>
+    currentTime: moment.Moment
 }
 
 const InProgressComponent = (props: Props) => {
-    const {subjects} = props
+    const {subjects, currentTime} = props
     return (
         <>
-            <div className={'fs-4 text-center'}>In progress</div>
-            <ul className={'list-group'}>{
+            <ul className={'list-unstyled'}>{
                 subjects.map(subject => {
-                    return <li className={`list-group-item`}>{subject.name}
+                    return <li className={`p-0 m-0`}>{subject.name}
                         <ul className={'list-group'}>
-                            {subject && subject.items ? subject.items.filter(item => moment().isBetween(item.from, item.to))
-                                    .sort(item => moment().unix() - moment(item.to).unix())
+                            {subject && subject.items ? subject.items.filter(item => currentTime.isSameOrAfter(item.from) && currentTime.isSameOrBefore(item.to))
+                                    .sort(item => currentTime.diff(item.to, "days"))
                                     .map(item => (
-                                        <li className={`${subject.class} list-group-item d-flex flex-column`}>
-                                            <span>{item.task}</span><small>Remains {moment().diff(item.to, "days")} days</small>
+                                        <li className={`${subject.class} list-group-item d-flex align-items-center justify-content-between p-1`}>
+                                            <span>{item.task}</span><small>{currentTime.to(item.to)}</small>
                                         </li>
                                     ))
                                 : null}

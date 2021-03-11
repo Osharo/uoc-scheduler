@@ -1,5 +1,5 @@
-import React from 'react';
-import './App.css';
+import React, {useEffect, useState} from 'react';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import moment from "moment";
@@ -11,24 +11,32 @@ import InProgressComponent from "./components/InProgressComponent";
 moment.locale('cat')
 
 function App() {
+    const [currentTime, setCurrentTime] = useState(moment())
+
+    setInterval(()=>{
+        setCurrentTime(moment())
+    },60000)
+
     return (
         <div className="container-fluid">
             <div className={"row"}>
-                <div className={"col-md-3"}>
-                    <div className={'sticky-xl-top sticky-lg-top pb-4'} style={{top: 0}}>
-                        <div>
-                            <h1 className={'text-center'}>Spring semester</h1>
-                            <InProgressComponent subjects={schedule.subjects}/>
+                <div className={"col-md-3 p-0 m-0"}>
+                    <div className={'sticky-xl-top sticky-lg-top pb-1'} style={{top: 0}}>
+                        <div className={'p-1'} style={{backgroundColor: '#73EDFF', color: '#000078'}}>
+                            <h1 className={'text-center'}>{currentTime.format('dddd, HH:mm')}</h1>
                         </div>
-                        <div className={'d-none d-md-block'}>
-                            <div className={'fs-4 text-center'}>Subjects</div>
-                            <ul className={'list-group'}>{schedule.subjects.map(subject => (
-                                <li className={`${subject.class} list-group-item`}>{subject.name}</li>
-                            ))}</ul>
+                        <div className={'p-2'}>
+                            <InProgressComponent currentTime={currentTime} subjects={schedule.subjects}/>
                         </div>
+                        {/*<div className={'d-none d-md-block p-2'}>*/}
+                        {/*    <div className={'fs-4 text-center'}>Subjects</div>*/}
+                        {/*    <ul className={'list-group'}>{schedule.subjects.map(subject => (*/}
+                        {/*        <li className={`${subject.class} list-group-item p-1`}>{subject.name}</li>*/}
+                        {/*    ))}</ul>*/}
+                        {/*</div>*/}
                     </div>
                 </div>
-                <div className={"col-md-9"}>
+                <div className={"col-md-9 bg-white"}>
                     <ScheduleComponent subjects={schedule.subjects}/>
                 </div>
             </div>
